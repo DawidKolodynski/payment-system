@@ -13,6 +13,8 @@ public class AddUserHandler implements Handler<AddUserCommand> {
 
     private UserRepository repository;
 
+    public AddUserHandler(){}
+
     public AddUserHandler(UserRepository repository) {
         this.repository = repository;
     }
@@ -26,7 +28,6 @@ public class AddUserHandler implements Handler<AddUserCommand> {
                 cmd.getEmail(),
                 cmd.getPassword()
         );
-
         repository.save(user);
     }
 
