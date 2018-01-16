@@ -1,10 +1,17 @@
 package com.dawid.paymentsystem.model;
 
-public interface UserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-    Integer generateNumber();
+import java.util.List;
+import java.util.Optional;
 
-    void save(User user);
+public interface UserRepository extends JpaRepository<User, Integer> {
 
-    User get(Integer userNo);
+    List<User> findById(Integer id);
+
+//    Integer generateNumber();
+//
+//    void save(User user);
+//
+//    User get(Integer userNo);
 }
