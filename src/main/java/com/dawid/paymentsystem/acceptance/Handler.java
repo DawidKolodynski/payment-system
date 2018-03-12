@@ -1,4 +1,4 @@
-package com.dawid.paymentsystem.application;
+package com.dawid.paymentsystem.acceptance;
 
 
 import com.dawid.paymentsystem.model.Command;

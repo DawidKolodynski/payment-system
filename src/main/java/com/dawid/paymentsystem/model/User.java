@@ -21,7 +21,6 @@ public class User {
     private String password;
 
 
-
     public User(Integer id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
@@ -33,9 +32,9 @@ public class User {
     public User() {
     }
 
-  public void updateEmail( String email) {
-      this.email = email;
-  }
+    public void updateEmail(String email) {
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;
