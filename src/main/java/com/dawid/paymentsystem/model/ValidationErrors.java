@@ -1,8 +1,12 @@
 package com.dawid.paymentsystem.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+
+@Component
 public class ValidationErrors {
 
     private Map<String, String> errors = new HashMap<>();

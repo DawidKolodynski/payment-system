@@ -1,17 +1,11 @@
 package com.dawid.paymentsystem.ui;
 
-import com.dawid.paymentsystem.acceptance.CommandGateway;
-import com.dawid.paymentsystem.model.User;
-import com.dawid.paymentsystem.model.UserRepository;
+import com.dawid.paymentsystem.api.CommandGateway;
 import com.dawid.paymentsystem.model.commands.CreateUserCommand;
-import com.dawid.paymentsystem.ui.requests.AddUserRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
@@ -33,7 +27,7 @@ public class UserController {
 //    }
 
 
-    @PostMapping("/users")
+    @PutMapping("/users")
     public void createUser(@RequestBody CreateUserCommand cmd) {
         commandGateway.execute(cmd);
     }

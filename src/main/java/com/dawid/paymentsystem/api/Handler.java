@@ -1,17 +1,16 @@
-package com.dawid.paymentsystem.acceptance;
+package com.dawid.paymentsystem.api;
 
 
-import com.dawid.paymentsystem.model.Command;
+import com.dawid.paymentsystem.model.commands.Command;
 
-public interface Handler<C extends Command> {
+public interface Handler<C extends Command,R> {
 
-    void handle(C command);
+    R handle(C command);
 
     Class<? extends Command> getSupportedCommandClass();
 
     default boolean canHandle(Command command) {
         return command.getClass().equals(getSupportedCommandClass());
     }
-
 
 }

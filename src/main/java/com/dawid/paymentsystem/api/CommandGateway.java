@@ -1,8 +1,8 @@
-package com.dawid.paymentsystem.acceptance;
+package com.dawid.paymentsystem.api;
 
 
-import com.dawid.paymentsystem.model.Command;
 import com.dawid.paymentsystem.model.ValidationErrors;
+import com.dawid.paymentsystem.model.commands.Command;
 import com.dawid.paymentsystem.model.commands.CommandInvalidException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
