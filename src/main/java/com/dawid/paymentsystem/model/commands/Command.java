@@ -1,7 +1,6 @@
 package com.dawid.paymentsystem.model.commands;
 
 import com.dawid.paymentsystem.model.NonDuplicableKey;
-import com.dawid.paymentsystem.model.ValidationErrors;
 
 import java.util.Collection;
 import java.util.Set;

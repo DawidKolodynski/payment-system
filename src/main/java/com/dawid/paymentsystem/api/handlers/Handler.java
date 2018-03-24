@@ -1,4 +1,4 @@
-package com.dawid.paymentsystem.api;
+package com.dawid.paymentsystem.api.handlers;
 
 
 import com.dawid.paymentsystem.model.commands.Command;

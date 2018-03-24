@@ -1,7 +1,7 @@
-package com.dawid.paymentsystem.api;
+package com.dawid.paymentsystem.api.handlers;
 
 import com.dawid.paymentsystem.model.User;
-import com.dawid.paymentsystem.model.ValidationErrors;
+import com.dawid.paymentsystem.model.commands.ValidationErrors;
 import com.dawid.paymentsystem.model.commands.Command;
 import com.dawid.paymentsystem.model.commands.CommandInvalidException;
 import com.dawid.paymentsystem.model.commands.CreateUserCommand;

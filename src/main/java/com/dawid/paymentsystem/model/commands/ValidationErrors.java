@@ -1,4 +1,4 @@
-package com.dawid.paymentsystem.model;
+package com.dawid.paymentsystem.model.commands;
 
 import org.springframework.stereotype.Component;
 

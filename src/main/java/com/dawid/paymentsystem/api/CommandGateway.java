@@ -1,7 +1,8 @@
 package com.dawid.paymentsystem.api;
 
 
-import com.dawid.paymentsystem.model.ValidationErrors;
+import com.dawid.paymentsystem.api.handlers.Handler;
+import com.dawid.paymentsystem.model.commands.ValidationErrors;
 import com.dawid.paymentsystem.model.commands.Command;
 import com.dawid.paymentsystem.model.commands.CommandInvalidException;
 import org.springframework.context.ApplicationContext;

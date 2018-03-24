@@ -1,32 +1,28 @@
-package com.dawid.paymentsystem.model.commands;
+package com.dawid.paymentsystem.api.dtos;
 
-public class CreateUserCommand implements Command{
+public class UserDto {
 
-//    private Integer id;
-
+    private Integer id;
     private String firstName;
-
     private String lastName;
-
     private String email;
-
     private String password;
 
-    public void validate(ValidationErrors errors) {
-        validatePresence(errors,"firstName", firstName);
-        validatePresence(errors,"lastName", lastName);
-        validatePresence(errors,"email", email);
+    public UserDto(Integer id, String firstName, String lastName, String email, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
     }
 
+    public Integer getId() {
+        return id;
+    }
 
-
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
