@@ -24,8 +24,9 @@ public class CreateUserHandler implements Handler<CreateUserCommand, Void> {
     @Override
     @Transactional
     public Void handle(CreateUserCommand command) {
+        User user = new User(command);
         validateUserExist(command);
-        repository.save(new User(command.getFirstName(), command.getLastName(), command.getEmail(), command.getPassword()));
+        repository.save(user);
         return null;
     }
 

@@ -1,9 +1,13 @@
 package com.dawid.paymentsystem.model;
 
 
+import com.dawid.paymentsystem.model.commands.CreateUserCommand;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -20,58 +24,23 @@ public class User {
 
     private String password;
 
+    @ElementCollection
+    private Set<String> cards;
 
-    public User(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
+
+    public User(CreateUserCommand command) {
+        this.firstName = command.getFirstName();
+        this.lastName = command.getLastName();
+        this.email = command.getEmail();
+        this.password = command.getPassword();
+        this.cards = command.getCards();
+    }
+
+    public User(Set<String> cards) {
+        this.cards = cards;
     }
 
     public User() {
     }
 
-    public void updateEmail(String email) {
-        this.email = email;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

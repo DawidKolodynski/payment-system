@@ -1,32 +1,34 @@
 package com.dawid.paymentsystem.model.commands;
 
+import java.util.Set;
+
 public class CreateUserCommand implements Command{
 
-//    private Integer id;
-
+    private Integer id;
     private String firstName;
-
     private String lastName;
-
     private String email;
-
     private String password;
+
+    private Set<String> cards;
+
 
     public void validate(ValidationErrors errors) {
         validatePresence(errors,"firstName", firstName);
         validatePresence(errors,"lastName", lastName);
         validatePresence(errors,"email", email);
+        validatePresence(errors, "cards", cards);
     }
 
 
 
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -58,5 +60,13 @@ public class CreateUserCommand implements Command{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<String> getCards() {
+        return cards;
+    }
+
+    public void setCards(Set<String> cards) {
+        this.cards = cards;
     }
 }

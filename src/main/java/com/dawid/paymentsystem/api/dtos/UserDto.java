@@ -1,5 +1,7 @@
 package com.dawid.paymentsystem.api.dtos;
 
+import java.util.Set;
+
 public class UserDto {
 
     private Integer id;
@@ -7,13 +9,15 @@ public class UserDto {
     private String lastName;
     private String email;
     private String password;
+    private Set<String> cards;
 
-    public UserDto(Integer id, String firstName, String lastName, String email, String password) {
+    public UserDto(Integer id, String firstName, String lastName, String email, String password, Set<String> cards) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.cards = cards;
     }
 
     public Integer getId() {

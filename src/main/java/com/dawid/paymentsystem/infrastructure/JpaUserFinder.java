@@ -20,7 +20,7 @@ public class JpaUserFinder implements UserFinder {
     @Override
     public List<UserDto> getAll() {
         Query query = entityManager.createQuery(
-                "select new com.dawid.paymentsystem.api.dtos.UserDto(u.id, u.firstName, u.lastName, u.email, u.password) from User u");
+                "select new com.dawid.paymentsystem.api.dtos.UserDto(u.id, u.firstName, u.lastName, u.email, u.password, u.cards) from User u");
         return query.getResultList();
     }
 }

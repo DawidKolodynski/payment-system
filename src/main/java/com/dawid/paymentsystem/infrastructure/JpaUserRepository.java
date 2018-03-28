@@ -12,7 +12,7 @@ public class JpaUserRepository extends GenericJpaRepository<User> implements Use
 
 
     @Override
-    public User get(Integer userNo) {
+    public User get(Integer userId) {
         return null;
     }
 
